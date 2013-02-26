@@ -12,6 +12,9 @@
 class User < ActiveRecord::Base
   attr_accessible :email, :name
 
+    has_many :links, :class_name => "link", :foreign_key => "name"
+
+
   before_save { |user| user.email = email.downcase }
 
   validates :name,  presence: true, length: { maximum: 50 }

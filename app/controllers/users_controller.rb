@@ -1,6 +1,12 @@
 class UsersController < ApplicationController
 
-    has_many :links, :class_name => "link", :foreign_key => "reference_id"
+def index
+    @users  = User.all
+end
+
+def find_all
+    User.all
+end
 
   def new
   end
