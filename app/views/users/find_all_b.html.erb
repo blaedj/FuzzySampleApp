@@ -2,9 +2,10 @@
 
 <h1>Bobby's email</h1>
 <div>
-<%  @bobby.each do |user| %>
+<%  @users.each do |user| %>
 
 <li>
+	<%= user.name %> :
     <%= user.email %>
 </li>
 

@@ -1,13 +1,17 @@
 SampleApp::Application.routes.draw do
 
+  get "user/find_all_n"
+
   match  "users", to: 'users#index'
 
   root to: 'static_pages#home'
 
   match '/signup',  to: 'users#new'
-  match '/find_all_b', to: 'users#find_all_b'
+  match '/index', to: 'users#index'
 
-  #match 'users#find_all_b',
+  match '/find_all_b', to: 'users#find_all_b'
+  match '/find_all_n', to: 'user#find_all_n'
+
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact',  to: 'static_pages#contact'
