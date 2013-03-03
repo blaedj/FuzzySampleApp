@@ -13,7 +13,9 @@ require 'spec_helper'
 
 describe User do
 
-  before { @user = User.new(name: "Example User", email: "user@example.com", password: "foobar", password_confirmation: "foobar" ) }
+  before {@user = User.new(name: "Example User", email: "user@example.com",
+                 password: "foobar", password_confirmation: "foobar")}
+
 
   subject { @user}
 
@@ -99,7 +101,7 @@ describe User do
       it { should_not == user_for_invalid_password }
       specify { user_for_invalid_password.should be_false }
     end
-  end # end of describe return vlue of authenticate
+  end # end of describe return value of authenticate
 
   describe "with a password that's too short" do
     before { @user.password = @user.password_confirmation = "a" * 5 }

@@ -14,7 +14,7 @@ def find_all_n
 	@users = User.where(:name => 'noah')
 end
 
-  # def new
-  # end
+  def new
+  end
 
 end
