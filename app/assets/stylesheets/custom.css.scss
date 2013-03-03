@@ -107,6 +107,11 @@ footer {
   }
 }
 
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
 /* miscellaneous*/
 
 .debug_dump {
@@ -116,5 +121,4 @@ footer {
   margin-top: 45px;
   @include box_sizing;
 }
-
 

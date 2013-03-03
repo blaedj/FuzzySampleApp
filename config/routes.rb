@@ -1,12 +1,10 @@
 SampleApp::Application.routes.draw do
 
-  get "user/find_all_n"
-
-  match  "users", to: 'users#index'
+  resources :users
 
   root to: 'static_pages#home'
 
-  match '/signup',  to: 'users#new'
+   match '/signup',  to: 'users#new'
   match '/index', to: 'users#index'
 
   match '/find_all_b', to: 'users#find_all_b'
@@ -15,6 +13,8 @@ SampleApp::Application.routes.draw do
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact',  to: 'static_pages#contact'
+
+
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
