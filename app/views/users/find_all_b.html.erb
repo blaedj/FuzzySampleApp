@@ -1,12 +1,13 @@
 <% provide(:title, 'Bobby') %>
 
 <h1>Bobby's email</h1>
-<div>
-<%  @bobby.each do |user| %>
 
-<li>
-    <%= user.email %>
-</li>
+<div>
+
+<%  @bobby.each do |user| %>
+    <div class="email">
+        <%= user.email %>
+    </div>
 
 <%end%>
 </div>
