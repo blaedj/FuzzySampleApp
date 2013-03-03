@@ -4,6 +4,11 @@
     <h2>This is the homepage for the Ruby on Rails Tutorial sample application</h2>
 
     <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+
+    <h4 align="left"> <%= link_to "View all Users", index_path %> </h4>
+    <h4 align="left"> <%= link_to "List find all_users_b", find_all_b_path %> </h4>
+    <h4 align="left"> <%= link_to "List find all_users_n", find_all_n_path %> </h4>
+
 </div>
 
 <%=  link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
