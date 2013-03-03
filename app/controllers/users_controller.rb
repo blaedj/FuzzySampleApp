@@ -10,12 +10,12 @@ def find_all_b
     #.where(:name => "bob")
 end
 
-#GET /user/find_all_n
+#GET /users/find_all_n
 def find_all_n
 	@users = User.where(:name => 'noah')
 end 
 
-  def new
-  end
+  # def new
+  # end
 
 end
