@@ -6,12 +6,12 @@ class UsersController < ApplicationController
 
     #GET /users/find_all_b
     def find_all_b
-        @users = User.where(:name => 'bobby')
+        @users = User.where('name like ?', '%b%')
         end
 
-    #GET /users/find_all_n
-    def find_all_n
-    	@users = User.where(:name => 'noah')
+    #GET /users/find_all_noah
+    def find_all_noah
+    	@users = User.where('name like ?', '%noah%')
     end
 
     def show

@@ -8,7 +8,7 @@ SampleApp::Application.routes.draw do
   match '/index', to: 'users#index'
 
   match '/find_all_b', to: 'users#find_all_b'
-  match '/find_all_n', to: 'users#find_all_n'
+  match '/find_all_noah', to: 'users#find_all_noah'
 
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
