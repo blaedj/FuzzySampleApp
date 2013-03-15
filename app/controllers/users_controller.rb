@@ -9,6 +9,8 @@ class UsersController < ApplicationController
         @users = User.where('name like ?', '%b%')
         end
 
+
+
     #GET /users/find_all_noah
     def find_all_noah
     	@users = User.where('name like ?', '%noah%')
