@@ -26,3 +26,6 @@ tramp
 # Org-mode
 .org-id-locations
 *_archive
+
+ # SublimeText project files
+*.sublime-workspace
