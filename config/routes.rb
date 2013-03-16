@@ -3,18 +3,22 @@ SampleApp::Application.routes.draw do
   get "users/new"
 
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
 
   root to: 'static_pages#home'
 
   match '/signup',  to: 'users#new'
-  match '/index', to: 'users#index'
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
 
-  match '/find_all_b', to: 'users#find_all_b'
+  match '/index',   to: 'users#index'
+
+  match '/find_all_b',    to: 'users#find_all_b'
   match '/find_all_noah', to: 'users#find_all_noah'
 
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
-  match '/contact',  to: 'static_pages#contact'
+  match '/contact', to: 'static_pages#contact'
 
 
 
