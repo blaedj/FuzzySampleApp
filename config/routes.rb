@@ -6,7 +6,7 @@ SampleApp::Application.routes.draw do
 
   root to: 'static_pages#home'
 
-   match '/signup',  to: 'users#new'
+  match '/signup',  to: 'users#new'
   match '/index', to: 'users#index'
 
   match '/find_all_b', to: 'users#find_all_b'
