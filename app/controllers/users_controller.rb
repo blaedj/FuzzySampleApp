@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+
     def index
         @users  = User.all
     end
@@ -8,8 +9,6 @@ class UsersController < ApplicationController
     def find_all_b
         @users = User.where('name like ?', '%b%')
         end
-
-
 
     #GET /users/find_all_noah
     def find_all_noah
