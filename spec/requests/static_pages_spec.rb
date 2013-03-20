@@ -44,4 +44,13 @@ describe "Static pages" do
     it_should_behave_like "all static pages"
   end #end describe contact page
 
+  describe "Blog page" do
+    before { visit blog_path }
+
+    let(:heading) { 'Blog' }
+    let(:page_title) { '' }
+
+    it_should_behave_like "all static pages"
+  end # end describe blog page
+
 end #end describe Static pages
