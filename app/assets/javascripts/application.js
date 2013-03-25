@@ -13,10 +13,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
-$(document).ready(function() {
-    $(".authOne").click( function () {
-        $(".author2").animate(toggle());
-        $(".author1").toggle();
-    })
-});
