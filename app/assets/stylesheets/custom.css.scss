@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:500);
 
 /* mixins, variables, etc. */
 
@@ -9,6 +10,8 @@
 }
 
 $grayMediumLight: #eaeaea;
+$themeColorBlue: #0055AA;
+
 
 /* universal */
 
@@ -18,6 +21,7 @@ html {
 
 body {
   padding-top: 60px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 section {
@@ -65,11 +69,15 @@ p {
 
 /* header */
 
+.navHeader{
+  background-color: $themeColorBlue;
+}
+
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: red;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -107,6 +115,7 @@ footer {
   }
 }
 
+/* gravatar*/
 .gravatar {
   float: left;
   margin-right: 10px;
@@ -120,6 +129,26 @@ footer {
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
+}
+
+/* sidebar*/
+
+.sidebar {
+/*  float: left;*/
+  background-color: $grayLight ;
+  border-radius: 4px;
+h2 {
+  color: #05A;
+  text-decoration: underline;
+}
+ul {
+outline: thin;
+      li{
+      font-size: 1.5em;
+      margin: 2%;
+    }
+}
+
 }
 
 /* Forms*/

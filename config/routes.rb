@@ -12,10 +12,16 @@ SampleApp::Application.routes.draw do
   match '/find_all_b', to: 'users#find_all_b'
   match '/find_all_noah', to: 'users#find_all_noah'
 
+match '/users', to: 'users#index'
+
+match '/users', to: 'users#index'
+
+match '/users', to: 'users#index'
+
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact',  to: 'static_pages#contact'
-
+  match '/blog',  to: 'static_pages#blog'
 
 
   # Sample of regular route:
