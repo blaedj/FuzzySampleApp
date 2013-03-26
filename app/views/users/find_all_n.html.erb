@@ -1,14 +1,14 @@
 
 
 <h1>User#find_all_n</h1>
+<ul class="plainList">
+    <%  @users.each do |user| %>
 
-<%  @users.each do |user| %>
+    <li>
+        <%= user.name %> :
+        <%= user.email %>
+    </li>
+    <%end%>
+</ul>
 
-<li>
-    <%= user.name %> :
-    <%= user.email %>
-</li>
-<%end%>
-
-<p>Find me in app/views/user/find_all_n.html.erb</p>
 
