@@ -1,6 +1,6 @@
 SampleApp::Application.routes.draw do
 
-  get "users/new"
+  resources :blogs
 
   resources :users
 
@@ -21,8 +21,6 @@ match '/users', to: 'users#index'
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact',  to: 'static_pages#contact'
-  match '/blog',  to: 'static_pages#blog'
-
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
