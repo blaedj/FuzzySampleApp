@@ -1,3 +1,4 @@
+<% provide(:title, 'Blog') %>
 <h1>Listing blogs</h1>
 
 <table>
@@ -15,9 +16,9 @@
     <td><%= blog.author %></td>
     <td><%= blog.date %></td>
     <td><%= blog.entry %></td>
-    <td><%= link_to 'Show', blog %></td>
-    <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-    <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><div class="btn"><%= link_to 'Show', blog %></div></td>
+    <td><div class="btn"><%= link_to 'Edit', edit_blog_path(blog) %></div></td>
+    <td><div class="btn"><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></div></td>
   </tr>
 <% end %>
 </table>
