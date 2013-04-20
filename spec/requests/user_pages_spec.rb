@@ -21,13 +21,14 @@ describe "UserPages" do
   describe  "signup" do
 
     before { visit signup_path }
-    let( :submit ) { "Continue" }
+    let( :submit ) { "Create My Account" }
 
     describe "with invalid information" do
       it "should not create a user" do
         expect { click_button submit }.not_to change(User, :count)
       end
     end
+  end
 
     describe  "with valid information" do
       before do
@@ -35,13 +36,17 @@ describe "UserPages" do
         fill_in  "Email",              with: "joeldon@example.com"
         fill_in   "Password",       with: "foobar"
         fill_in   "Confirm Password",   with: "foobar"
+
+        describe "followed by signout" do
+          before { click_link "Sign out" }
+          it { should have_link('Sign in') }
+        end
+
+        describe "after saving the user" do
+          it { should have_link('Sign out') }
+#          it "should create a user" do
+#          expect { click_button submit }.to change(User, :count).by( 1 )
+        end
       end
-
-      it "should create a user" do
-          expect { click_button submit }.to change(User, :count).by( 1 )
-      end
-    end
-
-    end # end describe signup
-
+    end  
 end
